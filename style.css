@@ -1,0 +1,147 @@
+@charset "UTF-8"
+
+html {
+  font-size: 100%;
+}
+/* フォントサイズを100%で指定しておくことで、ユーザーがブラウザで設定したフォントサイズが正しく反映されます */
+
+body {
+  color: #383e45;
+  font-size: 0.9rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+/* h1タグ用 */
+.h-h1 {
+  width: 120px;
+  line-height: 1px;
+  padding: 10px 0;
+}
+/* aタグのリンク範囲を親要素のサイズに広げます */
+.h-h1 a {
+  display: block;
+}
+/* h2タグ用 */
+.section-h2 {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #383e45;
+}
+/* h3タグ用 */
+.section-h3 {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+/* 画面の最大幅。共通使用。 */
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  display: flex;  /* 横並びに配置 */
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.h-ul {
+  display: flex;  /* liタグ（メニュー）を横並びに配置 */
+  padding: 10px 0;
+}
+.nav-li {
+  margin-left: 30px;
+}
+.nav-a {
+  color: #24292e;
+}
+.nav-a:hover {
+  opacity: 0.7;  /* メニューにマウスをのせた際に少し透過 */
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+.mainvisual {
+  margin-bottom: 80px;
+}
+.mv-img {
+  width: 100%;
+  max-width: 1920px;
+  height: 600px;
+  object-fit: cover;  /* vhはビューポート:横幅は画面サイズにあわせて伸縮 */
+}
+@media screen and (max-width: 600px) {
+  .mv-img {
+    height: calc(100vh - 60px);
+     /* 画像の高さをブラウザ下いっぱいまで広げます */
+  }
+}
+/*-------------------------------------------
+About
+-------------------------------------------*/
+.about-content {
+  display: flex;   /* 画像とテキストを横並びに配置します */
+  justify-content: center;
+  align-items: center;
+}
+.about_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.about-text {
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .about_img {
+    margin-left: 0;
+  }
+}
+
+/*-------------------------------------------
+Skill
+-------------------------------------------*/
+.skill-ul {
+ display: flex;
+ justify-content: space-between;
+}
+.skill-li {
+  width: 32%;
+}
+@media screen and (max-width: 600px) {
+  .skill-ul {
+    flex-direction: column;
+  }
+  .skill-li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+.footer {
+  background-color: #f2f2f2;
+  font-size: 0.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
